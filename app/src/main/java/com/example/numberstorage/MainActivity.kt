@@ -26,9 +26,11 @@ class MainActivity : AppCompatActivity() {
         //Setting up the click listener for the button//
         editAdd.setOnClickListener {
             if (counter >= 10) {
-                Toast.makeText(this, "No more values can be stored",
-                    Toast.LENGTH_SHORT).show()
-            }else{
+                Toast.makeText(
+                    this, "No more values can be stored",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
                 val inputText = editNum.text.toString()
 
                 if (inputText.isNotEmpty()) {
@@ -37,11 +39,11 @@ class MainActivity : AppCompatActivity() {
                     numbers[counter] = valueToStore
 
                     //Incrementing the counter so the next click targets the next index//
-                    counter ++
+                    counter++
+                }
+
             }
-
         }
-
 
 
 
