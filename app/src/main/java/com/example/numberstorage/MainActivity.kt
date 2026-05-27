@@ -3,6 +3,7 @@ package com.example.numberstorage
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        //Linking the UI to the main activity//
+        val edtNum = findViewById<EditText>(R.id.edtNum)
+        val edtAdd = findViewById<Button>(R.id.edtAdd)
+        val textMsg = findViewById<TextView>(R.id.textMsg)
 
         
 
