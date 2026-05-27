@@ -34,13 +34,26 @@ class MainActivity : AppCompatActivity() {
         edtAdd.setOnClickListener {
 
             //checking if the array is full//
-            if (counter>= numbers.size) {
+            if (counter >= numbers.size) {
 
                 //Display a message to let user that no more numbers can be stored//
                 textMsg.text = "No more values can be stored"
-                
-            }
 
+            } else {
+
+                //Calling the number entered by the user//
+                val input = edtNum.text.toString()
+
+                //Checking if the input is empty//
+                if (input.isEmpty()) {
+                    textMsg.text = "Please enter a number"
+                    return@setOnClickListener
+
+                }
+
+                
+
+            }
         }
 
 
