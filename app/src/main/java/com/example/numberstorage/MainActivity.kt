@@ -58,9 +58,14 @@ class MainActivity : AppCompatActivity() {
 
                 //Displaying the message to the user for when no more values can be stored//
                 textMsg.text = "Number saved! (${counter}/10 slots are used"
-                
 
+                //Clearing the EditText for the next input//
+                edtNum.text.clear()
 
+                //Checking if arrays became full after saving nuumber//
+                if (counter >= numbers.size) {
+                    textMsg.text = "More values cannot be stored"
+                }
             }
         }
 
