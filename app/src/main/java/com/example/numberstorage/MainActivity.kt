@@ -1,5 +1,6 @@
 package com.example.numberstorage
 
+import android.R.attr.text
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -29,7 +30,18 @@ class MainActivity : AppCompatActivity() {
         val edtAdd = findViewById<Button>(R.id.edtAdd)
         val textMsg = findViewById<TextView>(R.id.textMsg)
 
-        
+        //Setting a click listener for the button//
+        edtAdd.setOnClickListener {
+
+            //checking if the array is full//
+            if (counter>= numbers.size) {
+
+                //Display a message to let user that no more numbers can be stored//
+                textMsg.text = "No more values can be stored"
+                
+            }
+
+        }
 
 
 
