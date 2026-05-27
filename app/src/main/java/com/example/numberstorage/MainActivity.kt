@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     val numbers = IntArray(10)
 
     //This counter is to track which element to store the next value in//
-    val counter = 0
+    var counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,8 +50,15 @@ class MainActivity : AppCompatActivity() {
                     return@setOnClickListener
 
                 }
+                //Storing the array at the current counter position//
+                numbers[counter] = input.toInt()
 
+                //Incrementing the counter for next value//
+                counter++
+
+                //Displaying the message to the user for when no more values can be stored//
                 
+
 
             }
         }
