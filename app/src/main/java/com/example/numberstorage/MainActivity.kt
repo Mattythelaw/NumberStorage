@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                 counter++
 
                 //Displaying the message to the user for when no more values can be stored//
+                textMsg.text = "Number saved! (${counter}/10 slots are used"
                 
 
 
