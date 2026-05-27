@@ -11,14 +11,19 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    
+    //Global so that they are accessible everywhere the class//
+    //Created an array of size 10 to store the values//
+    val numbers = IntArray(10)
+
+    //This counter is to track which element to store the next value in//
+    val counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-
+        
 
 
 
